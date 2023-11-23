@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:layout_margin="10dp"
+            android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+            android:drawableRight="@drawable/outline_shopping_cart_24">
+
+        </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Vegetarian"
+        android:id="@+id/text1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/material_dynamic_primary60"
+        android:layout_below="@id/text"
+        android:textSize="25dp">
+
+    </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:layout_marginTop="40dp">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Non-Vegetarian"
+            android:textSize="25dp"
+            android:id="@+id/text2"
+            android:layout_margin="4dp"
+            android:textColor="@color/G"
+            android:layout_below="@id/recyclerview1">
+
+        </TextView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scroll"
+            android:layout_below="@id/text2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scroll"
+            >
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>
+
+
